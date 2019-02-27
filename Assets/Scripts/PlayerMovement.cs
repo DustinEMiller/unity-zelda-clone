@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     private Animator animator;
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
+    public VectorValue startingPosition;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour {
         myRigidBody = GetComponent<Rigidbody2D>();
         animator.SetFloat("moveX", 0);
         animator.SetFloat("moveY", -1);
+        transform.position = startingPosition.initialValue;
     }
 	
 	// Update is called once per frame
