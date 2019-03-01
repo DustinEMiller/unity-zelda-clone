@@ -10,11 +10,11 @@ public class Knockback : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("breakable") && 
-            this.gameObject.CompareTag("Player")) {
+            this.gameObject.GetComponent<PlayerMovement>()) {
             other.GetComponent<Pot>().Smash();
         }
 
-        if (other.gameObject.CompareTag("enemy") || other.gameObject.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("enemy") || other.gameObject.GetComponent<PlayerMovement>()) {
             Rigidbody2D hitObject = other.GetComponent<Rigidbody2D>();
             if (hitObject != null) {
 
@@ -31,7 +31,7 @@ public class Knockback : MonoBehaviour {
                     other.GetComponent<Enemy>().Knock(hitObject, knockTime, 0);
                 }
 
-                if (other.gameObject.CompareTag("Player")) {
+                if (other.gameObject.GetComponent<PlayerMovement>()) {
                     if (other.GetComponent<PlayerMovement>().currentState != PlayerState.Stagger) {
                         hitObject.GetComponent<PlayerMovement>().currentState = PlayerState.Stagger;
                         other.GetComponent<PlayerMovement>().Knock(knockTime, damage);

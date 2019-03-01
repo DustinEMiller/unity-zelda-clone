@@ -15,6 +15,6 @@ public class FloatValue : ScriptableObject, ISerializationCallbackReceiver
     }
 
     public void OnBeforeSerialize() {
-        throw new System.NotImplementedException();
+        
     }
 }
