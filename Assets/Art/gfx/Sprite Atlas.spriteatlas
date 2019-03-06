@@ -1234,6 +1234,7 @@ SpriteAtlas:
   - {fileID: 21300002, guid: f58e8bd2820456c45bfaa8f533ffea41, type: 3}
   - {fileID: 21300004, guid: f58e8bd2820456c45bfaa8f533ffea41, type: 3}
   - {fileID: 21300006, guid: f58e8bd2820456c45bfaa8f533ffea41, type: 3}
+  - {fileID: 21300000, guid: 8c8379f2a30613b40b7f1bab05d8cd2e, type: 3}
   - {fileID: 21300096, guid: 3dfda4e41d089b1488550a6eedff5652, type: 3}
   - {fileID: 21300098, guid: 3dfda4e41d089b1488550a6eedff5652, type: 3}
   - {fileID: 21300056, guid: 3dfda4e41d089b1488550a6eedff5652, type: 3}
@@ -2835,6 +2836,7 @@ SpriteAtlas:
   - modified gfx melee sprites_1
   - modified gfx melee sprites_2
   - modified gfx melee sprites_3
+  - key
   - Inner_48
   - Inner_49
   - Inner_28

@@ -27,7 +27,7 @@ public class Interactable : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.GetComponent<PlayerMovement>() && !other.isTrigger) {
             context.Raise();
-            playerInRange = true;
+            playerInRange = false;
         }
     }
 }

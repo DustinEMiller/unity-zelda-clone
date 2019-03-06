@@ -14,15 +14,18 @@ public class PlayerMovement : MonoBehaviour {
 
     public PlayerState currentState;
     public float speed;
-    private Rigidbody2D myRigidBody;
-    private Vector3 change;
-    private Animator animator;
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
     public VectorValue startingPosition;
+    public Inventory playerInventory;
+    public SpriteRenderer receivedItemSprite;
 
-	// Use this for initialization
-	void Start () {
+    private Rigidbody2D myRigidBody;
+    private Vector3 change;
+    private Animator animator;
+
+    // Use this for initialization
+    void Start () {
         currentState = PlayerState.Walk;
         animator = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -33,6 +36,10 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(currentState == PlayerState.Interact) {
+            return;
+        }
 
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
@@ -52,7 +59,16 @@ public class PlayerMovement : MonoBehaviour {
         yield return null;
         animator.SetBool("attacking", false);
         yield return new WaitForSeconds(.3f);
-        currentState = PlayerState.Walk;
+
+        if(currentState != PlayerState.Interact) {
+            currentState = PlayerState.Walk;
+        }
+    }
+
+    public void RaiseItem() {
+        animator.SetBool("receiveItem", true);
+        currentState = PlayerState.Interact;
+        receivedItemSprite.sprite = playerInventory.currentItem.itemSprite;
     }
 
     void UpdateAnimationAndMove() {
