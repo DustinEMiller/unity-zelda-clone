@@ -11,6 +11,7 @@ public class TreasureChest : Interactable {
     public GameObject dialogBox;
     public Text dialogText;
     public bool isOpen;
+    public bool empty = false;
 
     private Animator anim;
 
@@ -38,12 +39,32 @@ public class TreasureChest : Interactable {
         playerInventory.currentItem = contents;
 
         raiseItem.Raise();
+        
+        context.Raise();
         isOpen = true;
+        anim.SetBool("opened", true);
     }
 
     public void ConfirmChest() {
-        dialogBox.SetActive(false);
-        playerInventory.currentItem = null;
-        raiseItem.Raise();
+        if(!empty) {
+            dialogBox.SetActive(false);
+            raiseItem.Raise();
+            empty = true;
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.GetComponent<PlayerMovement>() && !other.isTrigger && !isOpen) {
+            context.Raise();
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.GetComponent<PlayerMovement>() && !other.isTrigger && !isOpen) {
+            context.Raise();
+            playerInRange = false;
+        }
     }
 }

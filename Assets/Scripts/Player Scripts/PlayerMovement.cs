@@ -66,9 +66,18 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void RaiseItem() {
-        animator.SetBool("receiveItem", true);
-        currentState = PlayerState.Interact;
-        receivedItemSprite.sprite = playerInventory.currentItem.itemSprite;
+        if(playerInventory.currentItem != null) {
+            if (currentState != PlayerState.Interact) {
+                animator.SetBool("receiveItem", true);
+                currentState = PlayerState.Interact;
+                receivedItemSprite.sprite = playerInventory.currentItem.itemSprite;
+            }
+            else {
+                animator.SetBool("receiveItem", false);
+                currentState = PlayerState.Idle;
+                receivedItemSprite.sprite = null;
+            }
+        }        
     }
 
     void UpdateAnimationAndMove() {
