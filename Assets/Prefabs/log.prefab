@@ -39,7 +39,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1188457935697904}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.48, y: -7.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -151,6 +151,8 @@ MonoBehaviour:
   baseAttack: 1
   moveSpeed: 1.5
   health: 2
+  deathEffect: {fileID: 1299739198074484, guid: e9d9a6d032657ac48a8626aa5aab05b1,
+    type: 2}
   target: {fileID: 0}
   chaseRadius: 4
   attackRadius: 2

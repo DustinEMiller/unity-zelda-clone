@@ -28,7 +28,7 @@ public class Knockback : MonoBehaviour {
                 // We Can consolodate code then
                 if (other.gameObject.CompareTag("enemy")) {
                     hitObject.GetComponent<Enemy>().currentState = EnemyState.Stagger;
-                    other.GetComponent<Enemy>().Knock(hitObject, knockTime, 0);
+                    other.GetComponent<Enemy>().Knock(hitObject, knockTime, damage);
                 }
 
                 if (other.gameObject.GetComponent<PlayerMovement>()) {

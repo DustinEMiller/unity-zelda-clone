@@ -54759,6 +54759,7 @@ MonoBehaviour:
   baseAttack: 1
   moveSpeed: 2
   health: 0
+  deathEffect: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 3
   attackRadius: 1

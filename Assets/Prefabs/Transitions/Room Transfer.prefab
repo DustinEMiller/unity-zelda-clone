@@ -9,51 +9,51 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1809501538429626}
+  m_RootGameObject: {fileID: 1041130328490802}
   m_IsPrefabAsset: 1
---- !u!1 &1809501538429626
+--- !u!1 &1041130328490802
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4936565302089014}
-  - component: {fileID: 61526038677702622}
-  - component: {fileID: 114278669255930782}
+  - component: {fileID: 4718602491016742}
+  - component: {fileID: 61215368305390744}
+  - component: {fileID: 114360941312690482}
   m_Layer: 0
-  m_Name: Scene Transition
+  m_Name: Room Transfer
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4936565302089014
+--- !u!4 &4718602491016742
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1809501538429626}
+  m_GameObject: {fileID: 1041130328490802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -5.63, z: 0.076936714}
+  m_LocalPosition: {x: 13.91, y: -0.5, z: 0.023977317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61526038677702622
+--- !u!61 &61215368305390744
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1809501538429626}
+  m_GameObject: {fileID: 1041130328490802}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0056800246, y: 0.08519912}
+  m_Offset: {x: 0.10307312, y: 0.45352077}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -64,17 +64,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9655901, y: 0.82960176}
+  m_Size: {x: 1.9070415, y: 0.09295845}
   m_EdgeRadius: 0
---- !u!114 &114278669255930782
+--- !u!114 &114360941312690482
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1809501538429626}
+  m_GameObject: {fileID: 1041130328490802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 197235ee3a1a6da42851002e13c0fb90, type: 3}
+  m_Script: {fileID: 11500000, guid: 1070c6d71ccd6bb4fb1add797fc22cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SampleScene
+  cameraChange: {x: 0, y: 25}
+  playerChange: {x: 0, y: 2, z: 0}
+  needText: 0
+  placeName: 
+  text: {fileID: 0}
+  placeText: {fileID: 0}
