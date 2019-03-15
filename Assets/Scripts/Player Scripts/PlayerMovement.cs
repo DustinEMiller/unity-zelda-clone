@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     public VectorValue startingPosition;
     public Inventory playerInventory;
     public SpriteRenderer receivedItemSprite;
+    public Signal playerHit;
 
     private Rigidbody2D myRigidBody;
     private Vector3 change;
@@ -100,6 +101,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private IEnumerator KnockCo(float knockTime) {
+        playerHit.Raise();
         if (myRigidBody != null) {
             yield return new WaitForSeconds(knockTime);
             myRigidBody.velocity = Vector2.zero;

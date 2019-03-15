@@ -554,6 +554,7 @@ MonoBehaviour:
   startingPosition: {fileID: 11400000, guid: 7924d38ab9981dd4e9a7d19571cc5395, type: 2}
   playerInventory: {fileID: 11400000, guid: 2fd1eead9efd5de45b3d8da3855b1bbc, type: 2}
   receivedItemSprite: {fileID: 212293384000095956}
+  playerHit: {fileID: 11400000, guid: c0f3ff744d5a4c44e881e601889ed74d, type: 2}
 --- !u!114 &114699829145680140
 MonoBehaviour:
   m_ObjectHideFlags: 1
