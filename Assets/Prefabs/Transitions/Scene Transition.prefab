@@ -34,8 +34,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809501538429626}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -5.63, z: 0.076936714}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.4389873, y: 19.492105, z: 0.076936714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,9 +77,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197235ee3a1a6da42851002e13c0fb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SampleScene
+  sceneToLoad: Dungeon
   playerPosition: {x: 0, y: 0}
-  playerStorage: {fileID: 0}
-  fadeInPanel: {fileID: 0}
-  fadeOutPanel: {fileID: 0}
-  fadeWait: 0
+  playerStorage: {fileID: 11400000, guid: 7924d38ab9981dd4e9a7d19571cc5395, type: 2}
+  fadeInPanel: {fileID: 1028965408449698, guid: b38ce782a061ae34ca447c8e154d71b4,
+    type: 2}
+  fadeOutPanel: {fileID: 1791811603496906, guid: e618c65b8adfc3141bccd8fa529a5a8f,
+    type: 2}
+  fadeWait: 0.33

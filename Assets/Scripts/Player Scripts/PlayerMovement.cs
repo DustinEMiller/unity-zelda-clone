@@ -12,13 +12,20 @@ public enum PlayerState {
 
 public class PlayerMovement : MonoBehaviour {
 
+    [Header("State Machine")]
     public PlayerState currentState;
+
+    [Header("Stats")]
     public float speed;
     public FloatValue currentHealth;
-    public Signal playerHealthSignal;
+    
+    [Header("Components")]
     public VectorValue startingPosition;
     public Inventory playerInventory;
     public SpriteRenderer receivedItemSprite;
+
+    [Header("Signals")]
+    public Signal playerHealthSignal;
     public Signal playerHit;
 
     private Rigidbody2D myRigidBody;
